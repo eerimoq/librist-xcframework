@@ -10,7 +10,10 @@ set -euo pipefail
 
 function clone_and_patch() {
     if [ ! -d librist ] ; then
-      git clone https://code.videolan.org/rist/librist.git
+        git clone https://github.com/eerimoq/librist
+        pushd librist
+        git checkout 784f6d6089f908726ecc180b0e37d80658061379
+        popd
     fi
 }
 
